@@ -1,8 +1,12 @@
 /*******************************
     Plan de masse : 
         01 - Style of NavBar
-
-
+        02 - Style salutation
+        03 - Pays
+        04 - transport
+        05 - Hotel
+        06 - reservation
+        07 - Footer
 *******************************/
 
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
@@ -12,6 +16,7 @@
 * {
     padding: 0;
     margin: 0;
+    box-sizing: border-box;
     font-family: monospace
 }
 
@@ -31,7 +36,8 @@ html {
 
 #home {
     height: 100dvh;
-    background: linear-gradient(rgba(0, 0, 0, 0.50), rgba(0, 0, 0, 0.50));
+    background-image: url(Photo/Fond/675c99190f8e2ce74ecc4888c30c7fa5-plages-madagascar-madevasion-149.jpg);
+    background-attachment: fixed;
     background-size: cover;
     position: relative;
 }
@@ -53,7 +59,7 @@ html {
 
 .navbar {
     position: fixed;
-    height: 4dvh;
+    height: 6.5dvh;
     width: 100%;
     display: flex;
     justify-content: space-evenly;
@@ -73,7 +79,7 @@ html {
 
 .nav-item a {
     margin: 0 20px;
-    color: rgb(245, 244, 244);
+    color: black;
     text-decoration: none;
     display: block;
     font-family: 'Poppins", sans-serif';
@@ -81,15 +87,20 @@ html {
 
 
 a {
-    color: white;
+    color: black;
     text-decoration: none;
 }
 
 a:hover {
-    color: #7c73a7;
+    color: #17f034;
     transition: all 0.4ms ease-in-out 0s;
 }
 
+img {
+    width: 3dvw;
+    height: 3dvw;
+    border-radius: 100%;
+}
 
 /**************************
     02 - Style salutation
@@ -104,4 +115,94 @@ a:hover {
     position: relative;
     padding-left: 5dvw;
     padding-top: 35dvh;
+}
+
+/********************
+    03 - Pays
+********************/
+#pays {
+    background-color: #17f034;
+    height: 100dvh;
+}
+
+
+
+
+/*******************
+    04 - transport
+********************/
+#transport {
+    background-color: #d81356;
+    height: 100dvh;
+}
+
+
+/*******************
+    05 - Hotel
+********************/
+#hotel {
+    background-color: aqua;
+    height: 100dvh;
+}
+
+/*******************
+    06 - reservation
+********************/
+#reservation {
+    background-color: blue;
+    height: 100dvh;
+}
+
+
+
+/******************
+    07 - Footer
+*******************/
+footer {
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+    height: 10dvh;
+}
+
+.social-icons li {
+    height: 40px;
+    width: 45px;
+    background-color: #555;
+    padding-top: 7px;
+    display: inline-block;
+    margin: 0 10px;
+    border-radius: 50px;
+}
+
+.social-icons i {
+    color: #fff;
+    font-size: 20px;
+    text-decoration: none;
+}
+
+.social-icons li a :hover {
+    background-color: none;
+}
+
+.social-icons :hover {
+    background-color: #d81356;
+}
+
+.social-icons li {
+    color: #fff;
+    font-size: 30px;
+    text-decoration: none;
+    transition: transform 0.3s ease;
+}
+
+.social-icons li:hover {
+    transform: scale(0.8);
+}
+
+.aurevoir {
+    font-size: 10px;
+    padding-left: 46%;
+    display: flex;
+    flex-direction: column;
 }
