@@ -2,9 +2,9 @@
     Plan de masse : 
         01 - Style of NavBar
         02 - Style salutation
-        03 - Pays
+        03 - Hotel
         04 - transport
-        05 - Hotel
+        05 - Pays
         06 - reservation
         07 - Footer
 *******************************/
@@ -17,7 +17,7 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    font-family: monospace
+    font-family: 'monospace';
 }
 
 html {
@@ -36,22 +36,33 @@ html {
 
 #home {
     height: 100dvh;
-    background-image: url(Photo/Fond/675c99190f8e2ce74ecc4888c30c7fa5-plages-madagascar-madevasion-149.jpg);
-    background-attachment: fixed;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url(Photo/Fond/675c99190f8e2ce74ecc4888c30c7fa5-plages-madagascar-madevasion-149.jpg);
     background-size: cover;
-    position: relative;
 }
 
 
 .titre {
-    height: 4dvh;
     position: absolute;
+    height: 4dvh;
+    width: 100%;
+    padding: 2dvh;
     display: flex;
-    align-items: center;
+    justify-content: center;
     font-size: x-large;
-    font-family: 'Poppins", sans-serif';
+    font-family: 'Poppins', sans-serif;
 }
 
+button {
+    width: 8dvw;
+    color: #555;
+    font-size: 12px;
+    padding: 12px 0;
+    background: black;
+    border: 0;
+    border-radius: 20px;
+    outline: none;
+
+}
 
 /*************************
     01 - Style of NavBar
@@ -77,18 +88,12 @@ html {
     justify-content: center;
 }
 
-.nav-item a {
+.nav a {
     margin: 0 20px;
-    color: black;
+    color: #ffffff;
     text-decoration: none;
     display: block;
-    font-family: 'Poppins", sans-serif';
-}
-
-
-a {
-    color: black;
-    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
 }
 
 a:hover {
@@ -96,33 +101,207 @@ a:hover {
     transition: all 0.4ms ease-in-out 0s;
 }
 
-img {
+.logo img {
     width: 3dvw;
     height: 3dvw;
     border-radius: 100%;
 }
 
+.logo {
+    width: 10dvw;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.logo .navbar-brand {
+    font-family: 'Poppins' sans-serif;
+    font-size: larger;
+}
+
+.logo .navbar-brand .color-text {
+    font-family:fantasy;
+    font-size: xx-large;
+    color: rgb(228, 153, 14);
+}
+
+.custom-button a {
+    text-decoration: none;
+}
+
+
+
 /**************************
     02 - Style salutation
 ***************************/
 
-.message {
-    position: relative;
-    padding-top: 1.5dvh;
-    height: 0px;
+#message {
+    position: absolute;
+    height: 50%;
+    width: 30%;
     display: flex;
     flex-direction: column;
-    position: relative;
-    padding-left: 5dvw;
-    padding-top: 35dvh;
+    align-items: center;
+    margin-top: 30dvh;
+    margin-left: 70%;
+    z-index: 100;
+    backdrop-filter: blur(2px);
 }
 
-/********************
-    03 - Pays
+.ligne {
+    border-left: 3px solid white;
+    height: 9dvh;
+}
+
+.txt {
+    color: white;
+    padding-top: 2dvh;
+}
+
+.message1 {
+    display: flex;
+    padding-top: 2dvh;
+    flex-direction: row;
+    align-items: center;
+}
+
+
+
+/*******************
+    03 - Hotel
 ********************/
-#pays {
-    background-color: #17f034;
-    height: 100dvh;
+#hotel {
+    height: 60dvh;
+    width: 100%;
+    height: 100vh;
+    background: #36768c;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+}
+
+.card1 {
+    width: 20dvw;
+    height: 50dvh;
+    border-radius: 20px;
+    overflow: hidden;
+    border: 5px solid bisque;
+    position: relative;
+    cursor: pointer;
+}
+
+.card1 img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+.liste {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.card1-body {
+    width: 100%;
+    height: 100%;
+    top: 0;
+    right: -100%;
+    position: absolute;
+    background: black;
+    backdrop-filter: blur(5px);
+    border-radius: 15px;
+    color: bisque;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transition: 1.5s;
+}
+
+.message2 {
+    width: 74%;
+    display: flex;
+    justify-content: center;
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    margin-top: 10dvh;
+    margin-bottom: 5dvh;
+}
+
+.card1:hover .card1-body {
+    right: 0;
+}
+
+.titre1 {
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
+.sous-titre {
+    text-transform: capitalize;
+    font-size: 14px;
+    font-weight: 300;
+}
+
+.info {
+    font-size: 16px;
+    line-height: 25px;
+    margin: 40px 0;
+    font-weight: 400;
+}
+
+.btn {
+    color: #36768c;
+    background: #367513;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-transform: capitalize;
+    border: none;
+    outline: none;
+    font-weight: 500;
+    width: 100px;
+}
+
+.btn a {
+    font-size: larger;
+    text-decoration: none;
+    color: rgb(228, 153, 14);
+}
+
+.icon-hotel {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-top: 10dvh;
+    width: 60%;
+    height: 11dvh;
+}
+
+.icon-hotel img {
+    width: 5dvw;
+    height: 5dvw;
+    border-radius: 100%;
+}
+
+#hotel:hover .icon-hotel{
+    animation: scroll-horizontal 5s linear;
+}
+
+
+
+@keyframes scroll-horizontal {
+    0% {
+        transform: translateX(100%);
+    }
+
+    100% {
+        transform: translateX(0%);
+    }
 }
 
 
@@ -132,25 +311,183 @@ img {
     04 - transport
 ********************/
 #transport {
-    background-color: #d81356;
+    background-color: bisque;
     height: 100dvh;
+    position: relative;
+}
+
+.list-transport {
+    position: absolute;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    border-radius: 10px;
+    align-items: center;
+    max-width: 1200px;
+    margin-top: 14dvh;
+    margin-left: 20dvw;
+    z-index: 100;
+    backdrop-filter: blur(8px);
+    box-shadow: 0 20px 30px rgba(0, 0, 5, 0.5);
+}
+
+.box {
+    max-width: 375px;
+    margin: 10px;
+    height: 30dvh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    color: white;
+    font-family: Arial, sans-serif;
+    border-radius: 2px;
+}
+
+.logo {
+    width: 4dvw;
+    height: 4dvw;
+    border-radius: 50%;
+}
+
+.box:hover .logo {
+    background-color: #d81356;
+    transition: background-color 0.3s ease;
+}
+
+.box {
+    position: relative;
 }
 
 
-/*******************
-    05 - Hotel
+.box:hover::after {
+    background-color: #d81356;
+    width: 100%;
+}
+
+.box:hover .logo {
+    background-color: #d81356;
+    transition: background-color 1s ease, transform 1s ease;
+    transform: scale(0.9);
+}
+
+p {
+    margin-top: 1dvh;
+    width: 75%;
+    font-size: 15px;
+    align-items: center;
+}
+
+
+
+/********************
+    05 - Pays
 ********************/
-#hotel {
-    background-color: aqua;
+#pays {
     height: 100dvh;
+    background-color: #36768c;
+}
+
+.card {
+    width: 22dvw;
+    height: 26dvh;
+    display: inline-block;
+    border-radius: 10px;
+    padding: 1dvw 2dvh;
+    margin: 1.2dvw 1.2dvh;
+    cursor: pointer;
+    background-position: center;
+    background-size: cover;
+}
+
+.Dubai .image1 {
+    background-image: url(Photo/Pays/Dubai/398151.jpg);
+}
+
+.Dubai .image2 {
+    background-image: url(Photo/Pays/Dubai/dubai-tour-en-bateau-ship-cruise-touristes-tourists-820x500.jpg);
+}
+
+.Dubai .image3 {
+    background-image: url(Photo/Pays/Dubai/Man-riding-a-camel-in-Jumeirah-beach-in-Dubai.jpg);
+}
+
+.Madagascar .image1 {
+    background-image: url(Photo/Pays/Madagasikara/adobestock_169586438.jpg);
+}
+
+.Madagascar .image2 {
+    background-image: url(Photo/Pays/Madagasikara/madagascar-gfa202169f_1920.jpg);
+}
+
+.Madagascar .image3 {
+    background-image: url(Photo/Pays/Madagasikara/safe-travel-madagascar.jpg);
+}
+
+.France .image1 {
+    background-image: url(Photo/Pays/France/61866353-44994425.jpg);
+}
+
+.France .image2 {
+    background-image: url(Photo/Pays/France/Notre-Dame_de_Paris\,_4_October_2017.jpg);
+}
+
+.France .image3 {
+    background-image: url(Photo/Pays/France/paris-tourisme-ecoresponsable.png);
 }
 
 /*******************
     06 - reservation
 ********************/
 #reservation {
-    background-color: blue;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
     height: 100dvh;
+    background-color: #0c7edb;
+}
+
+#reservation img {
+    height: 70dvh;
+    width: 40dvw;
+    margin-top: 15dvh;
+    margin-left: 5dvw;
+    border-radius: 15px;
+}
+
+.form {
+    background-size: contain;
+    margin-top: 15dvh;
+    height: 70dvh;
+    width: 50dvw;
+    background-color: #555;
+    padding: 20px;
+    border-radius: 15px;
+}
+
+.form h2 {
+    text-align: center;
+}
+
+.form form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form input {
+    padding: 8px;
+    border: 1px solid whitesmoke;
+    border-radius: 5px;
+}
+
+.form button {
+    margin-top: 10px;
+    padding: 10px;
+    background-color: rgb(0, 255, 0);
+    color: wheat;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
 }
 
 
