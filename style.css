@@ -43,7 +43,6 @@ html {
 
 .titre {
     position: absolute;
-    height: 4dvh;
     width: 100%;
     padding: 2dvh;
     display: flex;
@@ -311,7 +310,7 @@ a:hover {
     04 - transport
 ********************/
 #transport {
-    background-color: bisque;
+    background-color:#609893;
     height: 100dvh;
     position: relative;
 }
@@ -344,13 +343,13 @@ a:hover {
     border-radius: 2px;
 }
 
-.logo {
+.logo1 {
     width: 4dvw;
     height: 4dvw;
     border-radius: 50%;
 }
 
-.box:hover .logo {
+.box:hover .logo1 {
     background-color: #d81356;
     transition: background-color 0.3s ease;
 }
@@ -365,13 +364,13 @@ a:hover {
     width: 100%;
 }
 
-.box:hover .logo {
+.box:hover .logo1 {
     background-color: #d81356;
     transition: background-color 1s ease, transform 1s ease;
     transform: scale(0.9);
 }
 
-p {
+.box p {
     margin-top: 1dvh;
     width: 75%;
     font-size: 15px;
@@ -381,59 +380,70 @@ p {
 
 
 /********************
-    05 - Pays
+    05 - Galery
 ********************/
-#pays {
+#galery {
     height: 100dvh;
-    background-color: #36768c;
+    background-color: #295969;
 }
 
-.card {
-    width: 22dvw;
-    height: 26dvh;
-    display: inline-block;
-    border-radius: 10px;
-    padding: 1dvw 2dvh;
-    margin: 1.2dvw 1.2dvh;
+.photo{
+    border: 9px solid black;
+    height: 50dvh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.album {
+    position: relative;
+    width: 230px;
+    height: 230px;
+    transform-style: preserve-3d;
+    animation: rotation 40s linear infinite;
+}
+
+@keyframes rotation {
+    0% {
+        transform: perspective(1000px) rotateY(0deg);
+    }
+    100% {
+        transform: perspective(1000px) rotateY(-360deg);
+    }
+}
+
+.album span {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    transform-style: preserve-3d;
+    transform-origin: center;
+    transform: rotateY(calc(var(--m)*45deg)) translateZ(370px);
+}
+
+.album span img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+    border-radius: 30px;
+    transition: 1s;
+}
+
+
+.album span img:hover {
     cursor: pointer;
-    background-position: center;
-    background-size: cover;
+    transform: scale(1.2);
 }
 
-.Dubai .image1 {
-    background-image: url(Photo/Pays/Dubai/398151.jpg);
-}
 
-.Dubai .image2 {
-    background-image: url(Photo/Pays/Dubai/dubai-tour-en-bateau-ship-cruise-touristes-tourists-820x500.jpg);
-}
-
-.Dubai .image3 {
-    background-image: url(Photo/Pays/Dubai/Man-riding-a-camel-in-Jumeirah-beach-in-Dubai.jpg);
-}
-
-.Madagascar .image1 {
-    background-image: url(Photo/Pays/Madagasikara/adobestock_169586438.jpg);
-}
-
-.Madagascar .image2 {
-    background-image: url(Photo/Pays/Madagasikara/madagascar-gfa202169f_1920.jpg);
-}
-
-.Madagascar .image3 {
-    background-image: url(Photo/Pays/Madagasikara/safe-travel-madagascar.jpg);
-}
-
-.France .image1 {
-    background-image: url(Photo/Pays/France/61866353-44994425.jpg);
-}
-
-.France .image2 {
-    background-image: url(Photo/Pays/France/Notre-Dame_de_Paris\,_4_October_2017.jpg);
-}
-
-.France .image3 {
-    background-image: url(Photo/Pays/France/paris-tourisme-ecoresponsable.png);
+.texte p {
+    width: 30%;
 }
 
 /*******************
@@ -444,7 +454,7 @@ p {
     flex-direction: row;
     justify-content: space-around;
     height: 100dvh;
-    background-color: #0c7edb;
+    background-color: #dba11c;
 }
 
 #reservation img {
@@ -496,7 +506,7 @@ p {
     07 - Footer
 *******************/
 footer {
-    color: #fff;
+    background-color: #637B84;
     padding: 20px 0;
     text-align: center;
     height: 10dvh;
@@ -535,11 +545,4 @@ footer {
 
 .social-icons li:hover {
     transform: scale(0.8);
-}
-
-.aurevoir {
-    font-size: 10px;
-    padding-left: 46%;
-    display: flex;
-    flex-direction: column;
 }
