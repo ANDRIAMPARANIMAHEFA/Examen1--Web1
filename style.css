@@ -5,8 +5,7 @@
         03 - Hotel
         04 - transport
         05 - Pays
-        06 - reservation
-        07 - Footer
+        06 - Footer
 *******************************/
 
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
@@ -36,7 +35,7 @@ html {
 
 #home {
     height: 100dvh;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url(Photo/Fond/675c99190f8e2ce74ecc4888c30c7fa5-plages-madagascar-madevasion-149.jpg);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url(Photo/Fond/675c99190f8e2ce74ecc4888c30c7fa5-plages-madagascar-madevasion-149.jpg);
     background-size: cover;
 }
 
@@ -44,12 +43,14 @@ html {
 .titre {
     position: absolute;
     width: 100%;
-    padding: 2dvh;
+    padding-top: 2dvh;
     display: flex;
     justify-content: center;
     font-size: x-large;
     font-family: 'Poppins', sans-serif;
 }
+
+
 
 button {
     width: 8dvw;
@@ -62,6 +63,8 @@ button {
     outline: none;
 
 }
+
+
 
 /*************************
     01 - Style of NavBar
@@ -120,7 +123,7 @@ a:hover {
 }
 
 .logo .navbar-brand .color-text {
-    font-family:fantasy;
+    font-family: fantasy;
     font-size: xx-large;
     color: rgb(228, 153, 14);
 }
@@ -129,6 +132,31 @@ a:hover {
     text-decoration: none;
 }
 
+/*
+a ::before {
+    content: '';
+    position: absolute;
+    height: 3px;
+    background-color: #f9ab30;
+    left: 50%;
+    transform: translateX(-50%);
+    animation: animation 2s linear infinite;
+}
+
+@keyframes animation {
+    0% {
+        width: 0px;
+    }
+
+    50% {
+        width: 100px;
+    }
+
+    100% {
+        width: 0%;
+    }
+}
+*/
 
 
 /**************************
@@ -137,32 +165,50 @@ a:hover {
 
 #message {
     position: absolute;
-    height: 50%;
+    width: 100%;
+    height: 90dvh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.salutation {
     width: 30%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 30dvh;
-    margin-left: 70%;
-    z-index: 100;
-    backdrop-filter: blur(2px);
+    text-align: center;
+    font-family: 'Poppins' sans-serif;
 }
 
-.ligne {
-    border-left: 3px solid white;
-    height: 9dvh;
+.salutation h1 {
+    font-size: 40px;
 }
 
-.txt {
-    color: white;
-    padding-top: 2dvh;
+.salutation h2 {
+    font-size: 20px;
+
 }
 
-.message1 {
-    display: flex;
-    padding-top: 2dvh;
-    flex-direction: row;
-    align-items: center;
+.salutation p {
+    color: #fff;
+}
+
+.salutation .color-text {
+
+}
+
+.salutation a {
+    text-decoration: none;
+    color: #000;
+    font-size: 25px;
+    font-weight: bold;
+    border-radius: 50px;
+    padding: 14px 50px;
+    background-color: #fff;
+}
+
+.salutation a:hover {
+    letter-spacing: 3px;
+    transition: 1s;
+    color: rgb(228, 153, 14);
 }
 
 
@@ -287,7 +333,7 @@ a:hover {
     border-radius: 100%;
 }
 
-#hotel:hover .icon-hotel{
+#hotel:hover .icon-hotel {
     animation: scroll-horizontal 5s linear;
 }
 
@@ -310,96 +356,98 @@ a:hover {
     04 - transport
 ********************/
 #transport {
-    background-color:#609893;
+    background-color: #609893;
     height: 100dvh;
     position: relative;
 }
 
-.list-transport {
-    position: absolute;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    border-radius: 10px;
-    align-items: center;
-    max-width: 1200px;
-    margin-top: 14dvh;
-    margin-left: 20dvw;
-    z-index: 100;
-    backdrop-filter: blur(8px);
-    box-shadow: 0 20px 30px rgba(0, 0, 5, 0.5);
-}
-
-.box {
-    max-width: 375px;
-    margin: 10px;
-    height: 30dvh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    color: white;
-    font-family: Arial, sans-serif;
-    border-radius: 2px;
-}
-
-.logo1 {
-    width: 4dvw;
-    height: 4dvw;
-    border-radius: 50%;
-}
-
-.box:hover .logo1 {
-    background-color: #d81356;
-    transition: background-color 0.3s ease;
-}
-
-.box {
-    position: relative;
-}
-
-
-.box:hover::after {
-    background-color: #d81356;
+.ligne {
     width: 100%;
+    display: flex;
+    justify-content: space-around;
+    position: absolute;
+    margin-top: 20dvh;
 }
 
-.box:hover .logo1 {
-    background-color: #d81356;
-    transition: background-color 1s ease, transform 1s ease;
-    transform: scale(0.9);
+.place{
+    display: inline;
+    text-align: center;
+    border-radius: 19px;
+}
+.place img {
+    width: 20dvw;
+    height: 30dvh;
+    border-radius: 12px;
 }
 
-.box p {
-    margin-top: 1dvh;
-    width: 75%;
-    font-size: 15px;
-    align-items: center;
+.place h2 {
+    color: red;
+    font-size: 35px;
+    letter-spacing: 3px;
+    border-radius: 12px;
+    padding: 30px 30px;
+    background-color: #000;
 }
 
+.place a {
+    text-decoration: none;
+    color: red;
+    font-weight: bold;
+    font-size: 18px;
+    border-radius: 12px;
+    padding: 12px 30px;
+    background-color: #fff;
+}
 
+.place a:hover {
+    background-color: #000;
+    letter-spacing: 3px;
+    transition: 1s;
+}
 
 /********************
     05 - Galery
 ********************/
 #galery {
-    height: 100dvh;
+    height: 80dvh;
     background-color: #295969;
 }
 
-.photo{
-    border: 9px solid black;
+
+.texte {
+    position: relative;
+    height: 70dvh;
+    display: flex;
+    align-items: center;
+
+}
+
+.texte p {
+    height: 40dvh;
+    width: 45%;
+    display: flex;
+    align-items: center;
+    margin-left: 5%;
+    font-family: 'Poppins' sans-serif;
+    font-size: large;
+    color: #fff;
+}
+
+
+.photo {
     height: 50dvh;
     display: flex;
     align-items: center;
     justify-content: center;
     overflow: hidden;
+    width: 45%;
+    margin-left: 10%;
 }
 
 .album {
-    position: relative;
-    width: 230px;
-    height: 230px;
+    position: absolute;
+    width: 12dvw;
+    height: 15dvw;
     transform-style: preserve-3d;
     animation: rotation 40s linear infinite;
 }
@@ -408,6 +456,7 @@ a:hover {
     0% {
         transform: perspective(1000px) rotateY(0deg);
     }
+
     100% {
         transform: perspective(1000px) rotateY(-360deg);
     }
@@ -417,11 +466,9 @@ a:hover {
     position: absolute;
     width: 100%;
     height: 100%;
-    left: 0;
-    top: 0;
     transform-style: preserve-3d;
     transform-origin: center;
-    transform: rotateY(calc(var(--m)*45deg)) translateZ(370px);
+    transform: rotateY(calc(var(--m)*45deg)) translateZ(32dvh);
 }
 
 .album span img {
@@ -442,107 +489,17 @@ a:hover {
 }
 
 
-.texte p {
-    width: 30%;
-}
-
-/*******************
-    06 - reservation
-********************/
 #reservation {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    height: 100dvh;
-    background-color: #dba11c;
+    height: 80dvh;
+    background-image: url(Photo/Fond/3d-travel-1920-x-1080-wallpaper-x8bjjuo4z5pwpr21.jpg);
 }
-
-#reservation img {
-    height: 70dvh;
-    width: 40dvw;
-    margin-top: 15dvh;
-    margin-left: 5dvw;
-    border-radius: 15px;
-}
-
-.form {
-    background-size: contain;
-    margin-top: 15dvh;
-    height: 70dvh;
-    width: 50dvw;
-    background-color: #555;
-    padding: 20px;
-    border-radius: 15px;
-}
-
-.form h2 {
-    text-align: center;
-}
-
-.form form {
-    display: flex;
-    flex-direction: column;
-}
-
-.form input {
-    padding: 8px;
-    border: 1px solid whitesmoke;
-    border-radius: 5px;
-}
-
-.form button {
-    margin-top: 10px;
-    padding: 10px;
-    background-color: rgb(0, 255, 0);
-    color: wheat;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
 
 
 /******************
-    07 - Footer
+    06 - Footer
 *******************/
 footer {
     background-color: #637B84;
     padding: 20px 0;
     text-align: center;
-    height: 10dvh;
-}
-
-.social-icons li {
-    height: 40px;
-    width: 45px;
-    background-color: #555;
-    padding-top: 7px;
-    display: inline-block;
-    margin: 0 10px;
-    border-radius: 50px;
-}
-
-.social-icons i {
-    color: #fff;
-    font-size: 20px;
-    text-decoration: none;
-}
-
-.social-icons li a :hover {
-    background-color: none;
-}
-
-.social-icons :hover {
-    background-color: #d81356;
-}
-
-.social-icons li {
-    color: #fff;
-    font-size: 30px;
-    text-decoration: none;
-    transition: transform 0.3s ease;
-}
-
-.social-icons li:hover {
-    transform: scale(0.8);
 }
