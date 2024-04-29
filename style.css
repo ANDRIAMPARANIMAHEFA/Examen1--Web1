@@ -3,9 +3,10 @@
         01 - Style of NavBar
         02 - Style salutation
         03 - Hotel
-        04 - transport
-        05 - Pays
+        04 - Galerie
+        05 - Contact
         06 - Footer
+        07 - Responsive
 *******************************/
 
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
@@ -99,8 +100,8 @@ button {
 }
 
 a:hover {
-    color: #17f034;
-    transition: all 0.4ms ease-in-out 0s;
+    color:rgb(228, 153, 14);
+    transition: all 0.5s ease-in-out 0.1s ;
 }
 
 .logo img {
@@ -133,14 +134,15 @@ a:hover {
 }
 
 /*
-a ::before {
+.titre::before {
     content: '';
     position: absolute;
+    bottom: 0;
     height: 3px;
     background-color: #f9ab30;
     left: 50%;
     transform: translateX(-50%);
-    animation: animation 2s linear infinite;
+    animation: animation 3s linear infinite;
 }
 
 @keyframes animation {
@@ -156,8 +158,8 @@ a ::before {
         width: 0%;
     }
 }
-*/
 
+*/
 
 /**************************
     02 - Style salutation
@@ -191,9 +193,6 @@ a ::before {
     color: #fff;
 }
 
-.salutation .color-text {
-
-}
 
 .salutation a {
     text-decoration: none;
@@ -206,7 +205,7 @@ a ::before {
 }
 
 .salutation a:hover {
-    letter-spacing: 3px;
+    letter-spacing: 2px;
     transition: 1s;
     color: rgb(228, 153, 14);
 }
@@ -357,51 +356,86 @@ a ::before {
 ********************/
 #transport {
     background-color: #609893;
-    height: 100dvh;
+    height: 80dvh;
     position: relative;
 }
-
-.ligne {
-    width: 100%;
-    display: flex;
-    justify-content: space-around;
+.transportation {
     position: absolute;
-    margin-top: 20dvh;
+    margin-top: 15dvh;
+    width: 100%;
 }
 
-.place{
-    display: inline;
-    text-align: center;
-    border-radius: 19px;
-}
-.place img {
-    width: 20dvw;
-    height: 30dvh;
-    border-radius: 12px;
+.box2 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
 }
 
-.place h2 {
-    color: red;
-    font-size: 35px;
-    letter-spacing: 3px;
-    border-radius: 12px;
-    padding: 30px 30px;
-    background-color: #000;
+.unite {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 17vw;
+    height: 50dvh;
+    gap: 5px;
+    padding: 0.5vw;
+    background: #f2f2f2;
+    border-radius: 15px;
+    box-shadow: 0 0 15px 0px rgba(35, 88, 105, 0.5);
 }
 
-.place a {
+.footer1,
+.assurance {
+    position: absolute;
+    height: 15vh;
+    display: flex;
+    align-items: center;
+}
+
+.footer1 {
+    margin-top: 70%;
+}
+
+.assurance {
+    margin-top: 82%;
+    gap: 45px;
+}
+
+.assurance .p img {
+    width: 2dvw;
+    height: 2dvw;
+    object-fit: contain;
+    align-items: center;
+}
+
+.unite img {
+    position: absolute;
+    object-fit: cover;
+    width: 94%;
+    height: 28dvh;
+    border-radius: 15px;
+}
+
+.book {
+    position: absolute;
+    width: 94%;
+    padding: 8px;
+    display: flex;
+    justify-content: center;
+    margin-top: 125%;
+}
+
+.book a {
     text-decoration: none;
-    color: red;
-    font-weight: bold;
-    font-size: 18px;
-    border-radius: 12px;
-    padding: 12px 30px;
-    background-color: #fff;
+    background-color:  rgb(228, 153, 14);
+    padding: 9px;
+    border-radius: 50px;
 }
 
-.place a:hover {
-    background-color: #000;
-    letter-spacing: 3px;
+.book:hover a{
+    color: #fff;
+    letter-spacing: 2px;
     transition: 1s;
 }
 
@@ -433,6 +467,41 @@ a ::before {
     color: #fff;
 }
 
+.tire-haut,
+.tire-haut1 {
+    position: absolute;
+    background-color: #f9ab30;
+    height: 4px;
+    width: 2dvw;
+}
+
+.tire-bas,
+.tire-bas1 {
+    position: absolute;
+    border-left: 0.3dvw solid #f9ab30;
+    height: 5%;
+}
+
+.tire-haut {
+    margin-bottom: 30dvh;
+    margin-left: 3.5dvw;
+}
+
+.tire-bas {
+    margin-bottom: 27dvh;
+    margin-left: 3.5dvw;
+}
+
+
+.tire-haut1 {
+    margin-top: 27dvh;
+    margin-left: 46dvw;
+}
+
+.tire-bas1 {
+    margin-top: 24dvh;
+    margin-left: 48dvw;
+}
 
 .photo {
     height: 50dvh;
@@ -500,6 +569,30 @@ a ::before {
 *******************/
 footer {
     background-color: #637B84;
-    padding: 20px 0;
     text-align: center;
+    height: 10dvh;
+    padding-top: 10px;
+}
+
+
+.icon img {
+    width: 2dvw;
+    height: 2dvw;
+    border-radius: 100%;
+    cursor: pointer;
+}
+
+.icon img:hover {
+    background-color: burlywood;
+    transform: scale(1.2);
+    transition: 1s;
+}
+
+
+/********************
+    07 - Responsive
+********************/
+
+@media screen {
+    
 }
