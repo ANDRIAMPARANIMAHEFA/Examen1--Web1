@@ -12,7 +12,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
 
-
 * {
     padding: 0;
     margin: 0;
@@ -26,46 +25,45 @@ html {
 
 ::-webkit-scrollbar {
     width: 5px;
-
 }
 
 ::-webkit-scrollbar-thumb {
     background: rgba(12, 25, 204, 0.87);
-    border-radius: 50px
+    border-radius: 50px;
 }
 
 #home {
-    height: 100dvh;
+    height: 100vh;
     background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url(Photo/Fond/675c99190f8e2ce74ecc4888c30c7fa5-plages-madagascar-madevasion-149.jpg);
     background-size: cover;
 }
 
-
 .titre {
     position: absolute;
     width: 100%;
-    padding-top: 2dvh;
+    padding-top: 2vh;
     display: flex;
     justify-content: center;
     font-size: x-large;
     font-family: 'Poppins', sans-serif;
 }
 
-
-
 button {
-    width: 8dvw;
+    width: 8vw;
     color: #555;
-    font-size: 12px;
-    padding: 12px 0;
+    font-size: 1.2vw;
+    padding: 1.2vw 0;
     background: black;
     border: 0;
     border-radius: 20px;
     outline: none;
-
 }
 
-
+@media (max-width: 700px) {
+    #home {
+        background-size: cover;
+    }
+}
 
 /*************************
     01 - Style of NavBar
@@ -73,15 +71,15 @@ button {
 
 .navbar {
     position: fixed;
-    height: 6.5dvh;
+    height: 6.5vh;
     width: 100%;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
     z-index: 1000;
-    padding: 20px;
+    padding: 1.5vh;
     backdrop-filter: blur(8px);
-    box-shadow: 0 20px 30px rgba(0, 0, 5, 0.5);
+    box-shadow: 0 1.5vh 2.5vh rgba(0, 0, 5, 0.5);
 }
 
 .chemin {
@@ -92,26 +90,27 @@ button {
 }
 
 .nav a {
-    margin: 0 20px;
+    margin: 0 2vw;
     color: #ffffff;
     text-decoration: none;
     display: block;
     font-family: 'Poppins', sans-serif;
+    font-size: 1vw;
 }
 
 a:hover {
-    color:rgb(228, 153, 14);
-    transition: all 0.5s ease-in-out 0.1s ;
+    color: rgb(228, 153, 14);
+    transition: all 0.5s ease-in-out 0.1s;
 }
 
 .logo img {
-    width: 3dvw;
-    height: 3dvw;
+    width: 3vw;
+    height: 3vw;
     border-radius: 100%;
 }
 
 .logo {
-    width: 10dvw;
+    width: 10vw;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -133,33 +132,27 @@ a:hover {
     text-decoration: none;
 }
 
-/*
-.titre::before {
-    content: '';
+.icone0 img {
     position: absolute;
-    bottom: 0;
-    height: 3px;
-    background-color: #f9ab30;
-    left: 50%;
-    transform: translateX(-50%);
-    animation: animation 3s linear infinite;
+    width: 2vw;
+    height: 2vh;
+    cursor: pointer;
+    display: none;
 }
 
-@keyframes animation {
-    0% {
-        width: 0px;
+@media (max-width: 700px) {
+    .icone0 img {
+        display: block;
     }
 
-    50% {
-        width: 100px;
-    }
-
-    100% {
-        width: 0%;
+    .navbar a{
+        top: 100%;
+        left: 0 10px;
+        width: 100%;
+        height: 17.1rem;
+        background: red;
     }
 }
-
-*/
 
 /**************************
     02 - Style salutation
@@ -168,7 +161,7 @@ a:hover {
 #message {
     position: absolute;
     width: 100%;
-    height: 90dvh;
+    height: 90vh;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -181,42 +174,48 @@ a:hover {
 }
 
 .salutation h1 {
-    font-size: 40px;
+    font-size: 4vh;
 }
 
 .salutation h2 {
-    font-size: 20px;
-
+    font-size: 2vh;
 }
 
 .salutation p {
     color: #fff;
 }
 
-
 .salutation a {
     text-decoration: none;
     color: #000;
-    font-size: 25px;
+    font-size: 2.5vh;
     font-weight: bold;
     border-radius: 50px;
-    padding: 14px 50px;
+    padding: 1.4vh 5vh;
     background-color: #fff;
 }
 
 .salutation a:hover {
-    letter-spacing: 2px;
+    letter-spacing: 0.2vw;
     transition: 1s;
     color: rgb(228, 153, 14);
 }
 
-
+.message2 {
+    width: 74%;
+    display: flex;
+    justify-content: center;
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    margin-top: 10vh;
+    margin-bottom: 5vh;
+}
 
 /*******************
     03 - Hotel
 ********************/
 #hotel {
-    height: 60dvh;
+    height: 60vh;
     width: 100%;
     height: 100vh;
     background: #36768c;
@@ -227,8 +226,8 @@ a:hover {
 }
 
 .card1 {
-    width: 20dvw;
-    height: 50dvh;
+    width: 20vw;
+    height: 50vh;
     border-radius: 20px;
     overflow: hidden;
     border: 5px solid bisque;
@@ -260,7 +259,7 @@ a:hover {
     backdrop-filter: blur(5px);
     border-radius: 15px;
     color: bisque;
-    padding: 30px;
+    padding: 1vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -273,8 +272,8 @@ a:hover {
     justify-content: center;
     font-family: 'Poppins', sans-serif;
     text-align: center;
-    margin-top: 10dvh;
-    margin-bottom: 5dvh;
+    margin-top: 10vh;
+    margin-bottom: 5vh;
 }
 
 .card1:hover .card1-body {
@@ -283,26 +282,26 @@ a:hover {
 
 .titre1 {
     text-transform: uppercase;
-    font-weight: 500;
+    font-weight: 100;
 }
 
 .sous-titre {
     text-transform: capitalize;
-    font-size: 14px;
-    font-weight: 300;
+    font-size: 0.8vw;
+    font-weight: 100;
 }
 
 .info {
-    font-size: 16px;
-    line-height: 25px;
-    margin: 40px 0;
+    font-size: 1vw;
+    line-height: 1.7vw;
+    margin: 2vh 0;
     font-weight: 400;
 }
 
 .btn {
     color: #36768c;
     background: #367513;
-    padding: 10px 20px;
+    padding: 1vh 1vw;
     border-radius: 5px;
     text-transform: capitalize;
     border: none;
@@ -312,7 +311,6 @@ a:hover {
 }
 
 .btn a {
-    font-size: larger;
     text-decoration: none;
     color: rgb(228, 153, 14);
 }
@@ -321,22 +319,20 @@ a:hover {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    margin-top: 10dvh;
+    margin-top: 10vh;
     width: 60%;
-    height: 11dvh;
+    height: 11vh;
 }
 
 .icon-hotel img {
-    width: 5dvw;
-    height: 5dvw;
+    width: 5vw;
+    height: 5vw;
     border-radius: 100%;
 }
 
 #hotel:hover .icon-hotel {
     animation: scroll-horizontal 5s linear;
 }
-
-
 
 @keyframes scroll-horizontal {
     0% {
@@ -348,20 +344,18 @@ a:hover {
     }
 }
 
-
-
-
 /*******************
     04 - transport
 ********************/
 #transport {
     background-color: #609893;
-    height: 80dvh;
+    height: 80vh;
     position: relative;
 }
+
 .transportation {
     position: absolute;
-    margin-top: 15dvh;
+    margin-top: 15vh;
     width: 100%;
 }
 
@@ -376,19 +370,18 @@ a:hover {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    width: 17vw;
-    height: 50dvh;
-    gap: 5px;
+    width: 20vw;
+    height: 50vh;
     padding: 0.5vw;
     background: #f2f2f2;
     border-radius: 15px;
-    box-shadow: 0 0 15px 0px rgba(35, 88, 105, 0.5);
+    box-shadow: 0 0 1vw 0.2vw rgba(35, 88, 105, 0.5);
 }
 
 .footer1,
 .assurance {
     position: absolute;
-    height: 15vh;
+    height: 5vh;
     display: flex;
     align-items: center;
 }
@@ -398,13 +391,16 @@ a:hover {
 }
 
 .assurance {
+    width: 100%;
     margin-top: 82%;
-    gap: 45px;
+    display: flex;
+    justify-content: space-around;
 }
 
-.assurance .p img {
-    width: 2dvw;
-    height: 2dvw;
+.assurance .paragraphe img {
+    margin-left: 0.8vw;
+    width: 2vw;
+    height: 2vw;
     object-fit: contain;
     align-items: center;
 }
@@ -412,8 +408,8 @@ a:hover {
 .unite img {
     position: absolute;
     object-fit: cover;
-    width: 94%;
-    height: 28dvh;
+    width: 94.5%;
+    height: 28vh;
     border-radius: 15px;
 }
 
@@ -423,7 +419,7 @@ a:hover {
     padding: 8px;
     display: flex;
     justify-content: center;
-    margin-top: 125%;
+    margin-top: 41vh;
 }
 
 .book a {
@@ -433,9 +429,9 @@ a:hover {
     border-radius: 50px;
 }
 
-.book:hover a{
+.book:hover a {
     color: #fff;
-    letter-spacing: 2px;
+    letter-spacing: 0.08vw;
     transition: 1s;
 }
 
@@ -443,21 +439,19 @@ a:hover {
     05 - Galery
 ********************/
 #galery {
-    height: 80dvh;
+    height: 80vh;
     background-color: #295969;
 }
 
-
 .texte {
     position: relative;
-    height: 70dvh;
+    height: 70vh;
     display: flex;
     align-items: center;
-
 }
 
 .texte p {
-    height: 40dvh;
+    height: 40vh;
     width: 45%;
     display: flex;
     align-items: center;
@@ -472,39 +466,38 @@ a:hover {
     position: absolute;
     background-color: #f9ab30;
     height: 4px;
-    width: 2dvw;
+    width: 2vw;
 }
 
 .tire-bas,
 .tire-bas1 {
     position: absolute;
-    border-left: 0.3dvw solid #f9ab30;
+    border-left: 0.3vw solid #f9ab30;
     height: 5%;
 }
 
 .tire-haut {
-    margin-bottom: 30dvh;
-    margin-left: 3.5dvw;
+    margin-bottom: 30vh;
+    margin-left: 3.5vw;
 }
 
 .tire-bas {
-    margin-bottom: 27dvh;
-    margin-left: 3.5dvw;
+    margin-bottom: 27vh;
+    margin-left: 3.5vw;
 }
 
-
 .tire-haut1 {
-    margin-top: 27dvh;
-    margin-left: 46dvw;
+    margin-top: 27vh;
+    margin-left: 46vw;
 }
 
 .tire-bas1 {
-    margin-top: 24dvh;
-    margin-left: 48dvw;
+    margin-top: 24vh;
+    margin-left: 48vw;
 }
 
 .photo {
-    height: 50dvh;
+    height: 50vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -515,8 +508,8 @@ a:hover {
 
 .album {
     position: absolute;
-    width: 12dvw;
-    height: 15dvw;
+    width: 12vw;
+    height: 15vw;
     transform-style: preserve-3d;
     animation: rotation 40s linear infinite;
 }
@@ -537,7 +530,7 @@ a:hover {
     height: 100%;
     transform-style: preserve-3d;
     transform-origin: center;
-    transform: rotateY(calc(var(--m)*45deg)) translateZ(32dvh);
+    transform: rotateY(calc(var(--m)*45deg)) translateZ(32vh);
 }
 
 .album span img {
@@ -551,16 +544,9 @@ a:hover {
     transition: 1s;
 }
 
-
 .album span img:hover {
     cursor: pointer;
     transform: scale(1.2);
-}
-
-
-#reservation {
-    height: 80dvh;
-    background-image: url(Photo/Fond/3d-travel-1920-x-1080-wallpaper-x8bjjuo4z5pwpr21.jpg);
 }
 
 
@@ -570,14 +556,13 @@ a:hover {
 footer {
     background-color: #637B84;
     text-align: center;
-    height: 10dvh;
-    padding-top: 10px;
+    height: 10vh;
+    padding-top: 1vh;
 }
 
-
 .icon img {
-    width: 2dvw;
-    height: 2dvw;
+    width: 2vw;
+    height: 2vw;
     border-radius: 100%;
     cursor: pointer;
 }
@@ -588,11 +573,8 @@ footer {
     transition: 1s;
 }
 
-
 /********************
     07 - Responsive
 ********************/
 
-@media screen {
-    
-}
+
